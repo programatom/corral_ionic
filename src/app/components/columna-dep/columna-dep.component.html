@@ -1,0 +1,43 @@
+<div class="container-columna">
+  <ion-row>
+    <ion-col size="12">
+      <div class="container-columna-titulo">
+        <div class="titulo">
+          {{titulo}}
+        </div>
+      </div>
+    </ion-col>
+    <ion-col size="12">
+      <div class="container-columna-dato">
+        <ion-row no-padding>
+          <ion-col size="6" no-padding>
+            <div class="dato-nombre" *ngIf="isFirst == 'true'">
+              DEP
+            </div>
+          </ion-col>
+          <ion-col size="6" no-padding>
+            <div class="dato">
+              {{dato_dep}}
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-col>
+    <ion-col size="12">
+      <div class="container-columna-dato">
+        <ion-row no-padding>
+          <ion-col size="6" no-padding>
+            <div class="dato-nombre" *ngIf="isFirst == 'true'">
+              PRC
+            </div>
+          </ion-col>
+          <ion-col size="6" no-padding>
+            <div class="dato">
+              {{dato_prc}}
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-col>
+  </ion-row>
+</div>

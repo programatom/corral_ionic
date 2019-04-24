@@ -9,3 +9,25 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+@font-face {
+  font-family: 'Myriad';
+  src: url('./assets/fonts/MyriadPro-Regular.otf')
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('./assets/fonts/Futura-Condensed-Bold.otf')
+}
+
+.modal-email-friend .modal-wrapper {
+   height: 50%;
+   width:80%;
+   top: 20%;
+   border-radius: 5vw;
+   border-style: solid;
+   border-width: medium;
+   border-color: var(--ion-color-primary) !important;
+   position: absolute;
+   display: block;
+}

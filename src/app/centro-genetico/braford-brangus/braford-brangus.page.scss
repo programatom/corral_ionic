@@ -1,0 +1,47 @@
+.boton{
+  border-radius: 3vw;
+  width:70vw;
+  height: 20vw;
+  background: var(--ion-color-primary);
+  border-style: solid;
+  border-color: var(--ion-color-light);
+  border-width: thin;
+  text-align: center;
+  display: table;
+}
+
+.container-botones{
+  text-align: center;
+}
+
+.row-botones{
+  margin-top: 30vw;
+}
+
+.container-boton{
+  display:inline-block;
+}
+
+.container-logo-title{
+  margin-top: 15vw;
+}
+
+.texto-centro{
+  color:var(--ion-color-light);
+  font-family: Futura;
+  font-size:9vw;
+}
+
+.texto-boton{
+  display:table-cell;
+  vertical-align: middle;
+  color:var(--ion-color-light);
+  font-family: Futura;
+  font-size: 7vw;
+}
+ion-content{
+  --background: linear-gradient(to top, var(--ion-color-primary-tint),var(--ion-color-primary-shade)) !important;
+}
+.container-botones{
+  margin-top:15vw;
+}

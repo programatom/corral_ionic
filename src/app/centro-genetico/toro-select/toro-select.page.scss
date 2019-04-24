@@ -1,0 +1,58 @@
+ion-content{
+  --background: linear-gradient(to top, var(--ion-color-primary-tint),var(--ion-color-primary-shade)) !important;
+}
+
+.toolbar{
+  margin-bottom: 4vw;
+}
+
+
+.titulo{
+  color:var(--ion-color-light);
+  font-family: Futura;
+  font-size:9vw;
+  position: relative;
+  right:7vw;
+}
+
+.toro-container{
+  width:100%;
+  height: 60vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.toro-for{
+  margin-bottom: 1em;
+}
+
+.toro-footer{
+  width: 100%;
+  height:8vw;
+  background-color: black;
+  text-align: center;
+}
+
+.toro-name-container{
+  display:table;
+  height: 10vw;
+  width: min(60%);
+  background-color: black;
+  position:relative;
+  bottom:2vw;
+  border-radius: 15vw 15vw 0 0;
+  border-style: solid;
+  border-width: medium;
+  border-color: transparent !important;
+  margin-left: 20%;
+
+}
+
+.name{
+  color:var(--ion-color-light);
+  font-family: Futura;
+  font-size:5vw;
+  display:table-cell;
+  vertical-align: middle;
+
+}

@@ -1,0 +1,36 @@
+
+<ion-content padding>
+
+  <div class="toolbar">
+    <ion-row>
+      <ion-col size="2">
+        <ion-icon name="arrow-back" (click)="goBack()" color="light" style="font-size:11vw">
+        </ion-icon>
+      </ion-col>
+      <ion-col size="10" text-center>
+        <div class="titulo">
+          {{type}}
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="toros-container">
+    <div class="toro-for" *ngFor="let toro of toros">
+      <div class="toro-container"
+           *ngIf="toro.media.imagen_principal.length > 0"
+           [ngStyle]="{'background-image':'url('+toro.media.imagen_principal[0]+')'}"
+           (click) = "irAToro(toro)">
+
+      </div>
+      <div class="toro-footer" *ngIf="toro.media.imagen_principal.length > 0">
+        <div class="toro-name-container">
+          <div class="name">
+            {{toro.nombre}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

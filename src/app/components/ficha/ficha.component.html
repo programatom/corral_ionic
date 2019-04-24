@@ -1,0 +1,169 @@
+<div class="container">
+  <ion-row style="margin-bottom:3vw">
+    <ion-col size="12">
+      <div class="nombre">
+        <b>{{nombre}}</b>
+      </div>
+    </ion-col>
+    <ion-col size="12" style="margin-bottom:3vw">
+      <div class="linea-divisoria">
+      </div>
+    </ion-col>
+    <div class="ficha-carcasa-container">
+      <ion-row no-padding>
+        <ion-col size="6" no-padding>
+          <div class="titulo-tecnico">
+            FICHA
+          </div>
+          <div class="linea-divisoria ld-celeste">
+          </div>
+          <app-dato-tecnico-square [dato]="toro.ficha_rp" nombre="RP" background="rgb(211, 226, 236)">
+          </app-dato-tecnico-square>
+          <app-dato-tecnico-square [dato]="toro.ficha_hba" nombre="HBA" background="rgb(201, 202, 203)">
+          </app-dato-tecnico-square>
+          <app-dato-tecnico-square [dato]="toro.ficha_registro" nombre="REG." background="rgb(211, 226, 236)">
+          </app-dato-tecnico-square>
+          <app-dato-tecnico-square [dato]="toro.ficha_fn" nombre="FN" background="rgb(201, 202, 203)">
+          </app-dato-tecnico-square>
+          <app-dato-tecnico-square [dato]="toro.ficha_ts" nombre="TS" background="rgb(211, 226, 236)">
+          </app-dato-tecnico-square>
+          <app-dato-tecnico-square [dato]="toro.ficha_adn" nombre="ADN" background="rgb(201, 202, 203)">
+          </app-dato-tecnico-square>
+        </ion-col>
+        <ion-col size="6" no-padding>
+          <div class="titulo-tecnico">
+            CARCASA
+          </div>
+          <div class="linea-divisoria ld-celeste">
+          </div>
+          <app-dato-tecnico-square [dato]="toro.carc_ce + ' cm.'" nombre="CE" background="rgb(211, 226, 236)">
+          </app-dato-tecnico-square>
+          <app-dato-tecnico-square [dato]="toro.carc_peso + ' kg.'" nombre="PESO" background="rgb(201, 202, 203)">
+          </app-dato-tecnico-square>
+          <app-dato-tecnico-square [dato]="toro.carc_largog + ' cm.'" nombre="LARGO G." background="rgb(211, 226, 236)">
+          </app-dato-tecnico-square>
+          <app-dato-tecnico-square [dato]="toro.carc_anchog + ' cm.'" nombre="ANCHO G." background="rgb(201, 202, 203)">
+          </app-dato-tecnico-square>
+          <app-dato-tecnico-square [dato]="toro.carc_altog + ' mt.'" nombre="ALTO G." background="rgb(211, 226, 236)">
+          </app-dato-tecnico-square>
+          <app-dato-tecnico-square [dato]="toro.carc_largo + ' mt.'" nombre="LARGO" background="rgb(201, 202, 203)">
+          </app-dato-tecnico-square>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" no-padding style="margin-bottom:3vw;">
+      <div class="titulo-tecnico">
+        RANKING
+      </div>
+      <div class="linea-divisoria ld-celeste">
+      </div>
+      <app-dato-tecnico-square [dato]="toro.ranking_estructura" nombre="ESTRUCTURA" background="rgb(211, 226, 236)">
+      </app-dato-tecnico-square>
+      <app-dato-tecnico-square [dato]="toro.ranking_musculatura" nombre="MUSCULATURA" background="rgb(201, 202, 203)">
+      </app-dato-tecnico-square>
+      <app-dato-tecnico-square [dato]="toro.ranking_precocidad" nombre="PRECOCIDAD" background="rgb(211, 226, 236)">
+      </app-dato-tecnico-square>
+      <app-dato-tecnico-square [dato]="toro.ranking_prepucio" nombre="PREPUCIO" background="rgb(201, 202, 203)">
+      </app-dato-tecnico-square>
+      <app-dato-tecnico-square [dato]="toro.ranking_profundidad" nombre="PROFUNDIDAD" background="rgb(211, 226, 236)">
+      </app-dato-tecnico-square>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" no-padding style="margin-bottom:3vw;">
+      <div class="titulo-tecnico">
+        DEP's
+      </div>
+      <div class="linea-divisoria ld-celeste">
+      </div>
+      <ion-row>
+        <ion-col size="4">
+          <app-columna-dep titulo="PN" [dato_dep]="toro.pn_dep" isFirst="true" [dato_prc]="toro.pn_prc">
+          </app-columna-dep>
+        </ion-col>
+        <ion-col size="4">
+          <app-columna-dep titulo="PD" [dato_dep]="toro.pd_dep" isFirst="false" [dato_prc]="toro.pd_prc">
+          </app-columna-dep>
+        </ion-col>
+        <ion-col size="4">
+          <app-columna-dep titulo="AM" [dato_dep]="toro.am_dep" isFirst="false" [dato_prc]="toro.am_prc">
+          </app-columna-dep>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4">
+          <app-columna-dep titulo="LyC" [dato_dep]="toro.lyc_dep" isFirst="true" [dato_prc]="toro.lyc_prc">
+          </app-columna-dep>
+        </ion-col>
+        <ion-col size="4">
+          <app-columna-dep titulo="PF" [dato_dep]="toro.pf_dep" isFirst="false" [dato_prc]="toro.pf_prc">
+          </app-columna-dep>
+        </ion-col>
+        <ion-col size="4">
+          <app-columna-dep titulo="CE" [dato_dep]="toro.ce_dep" isFirst="false" [dato_prc]="toro.ce_prc">
+          </app-columna-dep>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col size="12" style="margin-bottom:3vw;">
+      <ion-row>
+        <ion-col size="12" no-padding text-center>
+          <div class="texto-genetica">
+            {{toro.abuelo_paterno}}
+          </div>
+        </ion-col>
+        <ion-col size="12">
+          <div class="linea-divisoria">
+          </div>
+        </ion-col>
+        <ion-col size="12" no-padding text-center>
+          <div class="texto-genetica tg-primary">
+            <strong>
+              {{toro.padre}}
+            </strong>
+          </div>
+        </ion-col>
+        <ion-col size="12">
+          <div class="linea-divisoria">
+          </div>
+        </ion-col>
+        <ion-col size="12" no-padding text-center>
+          <div class="texto-genetica">
+            {{toro.abuela_paterna}}
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col size="12" style="margin-bottom:3vw;">
+      <ion-row>
+        <ion-col size="12" no-padding text-center>
+          <div class="texto-genetica">
+            {{toro.abuelo_materno}}
+          </div>
+        </ion-col>
+        <ion-col size="12">
+          <div class="linea-divisoria">
+          </div>
+        </ion-col>
+        <ion-col size="12" no-padding text-center>
+          <div class="texto-genetica tg-primary">
+            <strong>
+              {{toro.madre}}
+            </strong>
+          </div>
+        </ion-col>
+        <ion-col size="12">
+          <div class="linea-divisoria">
+          </div>
+        </ion-col>
+        <ion-col size="12" no-padding text-center>
+          <div class="texto-genetica">
+            {{toro.abuela_materna}}
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</div>

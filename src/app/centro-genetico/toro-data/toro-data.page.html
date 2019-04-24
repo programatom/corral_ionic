@@ -1,0 +1,73 @@
+
+
+<ion-content padding>
+
+  <div class="toolbar">
+    <div class="toolbar-up">
+      <ion-row>
+        <ion-col size="2">
+          <div class="boton" (click)="dismiss()">
+            <ion-icon name="arrow-back" color="light" class="icono-back">
+            </ion-icon>
+          </div>
+        </ion-col>
+        <ion-col size="5">
+          <div class="boton" (click)="enterData('cotizacion')">
+            <div class="texto-boton">
+              PEDIR COTIZACIÓN
+            </div>
+          </div>
+        </ion-col>
+        <ion-col size="5">
+          <div class="boton" (click)="enterData('pedido')">
+            <div class="texto-boton">
+              HACER PEDIDO
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="toolbar-down">
+      <ion-row>
+        <ion-col no-padding size="3">
+          <div class="boton boton-thin" (click)="switchView('observaciones')" id="observaciones">
+            <div class="texto-boton texto-boton-sm">
+              OBSERVACIONES
+            </div>
+          </div>
+        </ion-col>
+        <ion-col no-padding size="3">
+          <div class="boton boton-thin" (click)="switchView('ficha')" id="ficha">
+            <div class="texto-boton texto-boton-sm">
+              FICHA
+            </div>
+          </div>
+        </ion-col>
+        <ion-col no-padding size="3">
+          <div class="boton boton-thin" (click)="switchView('fotos')" id="fotos">
+            <div class="texto-boton texto-boton-sm">
+              FOTOS
+            </div>
+          </div>
+        </ion-col>
+        <ion-col no-padding size="3">
+          <div class="boton boton-thin" (click)="switchView('videos')" id="videos">
+            <div class="texto-boton texto-boton-sm">
+              VIDEOS
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+
+  <div class="content" >
+    <app-descripcion [titulo]="selectedTitulo" [texto] ="selectedTexto" [nombre]="toro.nombre" *ngIf="selectedView == 'observaciones'">
+    </app-descripcion>
+    <app-ficha [nombre]="toro.nombre" [toro]="toro" *ngIf="selectedView == 'ficha'">
+    </app-ficha>
+    <app-fotos [fotos]="toro.media.imagenes_secundarias" *ngIf="selectedView =='fotos'"></app-fotos>
+
+  </div>
+
+</ion-content>

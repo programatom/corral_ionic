@@ -1,0 +1,83 @@
+<ion-content>
+
+  <ion-row class="container-logo-titulo">
+    <ion-col size="2" text-center class="child-container-logo">
+        <img src="assets/imgs/logo-centro.png" class="logo">
+    </ion-col>
+    <ion-col size="10" >
+     <div class="texto-titulo">
+       CORRAL DE GUARDIA
+     </div>
+    </ion-col>
+  </ion-row>
+  <img src="assets/imgs/tira-separadora.png" alt="">
+  <br>
+
+  <div class="remate-wrapper">
+    <video *ngIf="mediaObject.video.length != 0"[src]="mediaObject.video" width="95%" height="240" controls poster="assets/imgs/portada-video.jpg">
+
+    </video>
+    <br><br>
+    <div class="recuadro-blanco">
+      <div class="titulo-principal">
+        {{remateData.dia}} {{remateData.fecha}} {{remateData.mes}}
+      </div>
+      <div class="ubicacion">
+        {{remateData.ubicacion}}
+      </div>
+      <div class="descripcion">
+        {{remateData.subtitulo}}
+      </div>
+    </div>
+    <br><br><br><br>
+    <div class="" *ngFor="let toro of remateData.toros">
+      <div class="recuadro-blanco" style="padding:0vw">
+        <div class="cantidad-toros-hembras" style="padding:0">
+          {{toro.cantidad}}
+        </div>
+      </div>
+      <div class="texto-toro-hembra">
+        {{toro.nombre}}
+      </div>
+      <br>
+    </div>
+    <ion-slides pager="true" [options]="slideOpts1">
+      <ion-slide *ngFor="let media of mediaObject.fotos_toros" class="slide-fotos" [ngStyle]="{'background-image':'url('+media+')'}">
+      </ion-slide>
+    </ion-slides>
+    <br>
+    <div class="" *ngFor="let hembra of remateData.hembras">
+      <div class="recuadro-blanco" style="padding:0vw">
+        <div class="cantidad-toros-hembras" style="padding:0">
+          {{hembra.cantidad}}
+        </div>
+      </div>
+      <div class="texto-toro-hembra">
+        {{hembra.nombre}}
+      </div>
+      <br>
+    </div>
+
+    <ion-slides pager="true" [options]="slideOpts2">
+      <ion-slide *ngFor="let media of mediaObject.fotos_hembras" class="slide-fotos" [ngStyle]="{'background-image':'url('+media+')'}">
+      </ion-slide>
+    </ion-slides>
+    <br>
+    <div class="recuadro-blanco">
+      <div class="descripcion">
+        <strong>Horario almuerzo: </strong> {{remateData.hora_almuerzo}} Hrs. <br>
+        <strong>Horario ventas: </strong> {{remateData.hora_ventas}} Hrs. <br>
+        <strong>{{remateData.mensaje_adicional}}</strong> <br>
+      </div>
+      <div class="ubicacion">
+        <strong> Remata: </strong>  <br> {{remateData.rematador}}
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+</ion-content>

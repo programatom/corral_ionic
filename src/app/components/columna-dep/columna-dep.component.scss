@@ -1,0 +1,28 @@
+.titulo{
+  font-size:5vw;
+  color:var(--ion-color-dark);
+  font-family: Futura;
+}
+
+.container-columna-titulo{
+  background-color: var(--ion-color-celeste) !important;
+}
+
+.dato{
+  font-family: Futura;
+  color:var(--ion-color-dark);
+}
+.container-columna-dato{
+  border-bottom-width: thin;
+  border-bottom-color: var(--ion-color-celeste) !important;
+  border-bottom-style: solid;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.dato-nombre{
+  text-align: left;
+  font-family: Myriad;
+  font-weight: lighter;
+  font-size:3vw;
+}

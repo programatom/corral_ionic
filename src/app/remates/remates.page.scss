@@ -1,0 +1,85 @@
+ion-content{
+  --background:var(--ion-color-primary-tint) !important;
+  text-align: center;
+}
+
+.container-logo-titulo{
+  margin-left: 2vw;
+  padding: 3vw;
+  display: table;
+}
+
+.child-container-logo{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.logo{
+  width:10vw;
+}
+.texto-titulo{
+  color:var(--ion-color-light);
+  font-size:9vw;
+  font-family: Futura;
+}
+
+.remate-wrapper{
+  display: inline-block;
+  text-align: center;
+  width:85%;
+}
+
+.recuadro-blanco{
+  display: inline-block;
+  background-color: white;
+  padding: 3vw;
+  width:100%;
+  text-align: center;
+}
+
+
+.titulo-principal{
+  color:var(--ion-color-secondary);
+  font-size:9vw;
+  font-family: 'Futura';
+}
+
+.ubicacion{
+  color:var(--ion-color-secondary);
+  font-size:5vw;
+  font-family: 'Futura';
+}
+
+.slide-fotos{
+  height:50vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-color: var(--ion-color-light);
+  border-width: thin;
+  border-style: solid;
+
+}
+
+ion-slides {
+    --bullet-background: var(--ion-color-primary);
+    --bullet-background-active: var(--ion-color-light);
+}
+
+.descripcion{
+  font-size:5vw;
+  font-family: 'Futura';
+}
+
+.texto-toro-hembra{
+  font-size:5.5vw;
+  color:white;
+  font-family: 'Futura';
+  word-wrap: break-word;
+}
+
+.cantidad-toros-hembras{
+  color:var(--ion-color-secondary);
+  font-size:13vw;
+  font-family: 'Futura';
+  font-weight: bold;
+}

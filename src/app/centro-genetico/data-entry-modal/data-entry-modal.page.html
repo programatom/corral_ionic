@@ -1,0 +1,20 @@
+<ion-content padding>
+
+
+<div style="margin-bottom:1.5vw">
+  <ion-item *ngFor="let campo of dataArray">
+    <ion-label position="floating">
+      {{campo.displayName}}
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="inputObject[campo.variableName]">
+    </ion-input>
+  </ion-item>
+</div>
+
+  <div class="boton boton-thin" (click)="sendEmail()">
+    <div class="texto-boton">
+      {{buttonText}}
+    </div>
+  </div>
+
+</ion-content>
