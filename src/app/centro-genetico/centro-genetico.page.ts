@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-centro-genetico',
@@ -8,13 +8,22 @@ import { NavController } from '@ionic/angular';
 })
 export class CentroGeneticoPage implements OnInit {
 
-  constructor(private navCtrl: NavController) { }
+  constructor(private navCtrl: NavController,
+              private toastCtrl: ToastController) { }
 
   ngOnInit() {
   }
 
   irASemen(){
     this.navCtrl.navigateForward("tabs/centro-genetico/select")
+  }
+
+  async toast(){
+    let toast = await this.toastCtrl.create({
+      message:"Sección en desarrollo!",
+      duration: 800
+    });
+    toast.present();
   }
 
 }

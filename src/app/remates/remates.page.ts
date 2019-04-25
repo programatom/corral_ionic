@@ -46,22 +46,24 @@ export class RematesPage implements OnInit {
     this.remateServ.lastRemate().subscribe((respuesta)=>{
       console.log(respuesta);
       this.remateData = respuesta.data;
-      let remate_id = respuesta.data.id;
-      let sub_dir_array = [
-        "fotos_toros",
-        "fotos_hembras",
-        "video"
-      ];
-      this.remateServ.browsePath({
-        "path":"remates/remate_"+ remate_id + "/",
-        "sub_dir_array":sub_dir_array
-      }).subscribe((respuesta)=>{
-        let urls = respuesta.data;
-        sub_dir_array.filter((value)=>{
-          this.mediaObject[value] = this.commonServ.processUrls(urls[value]);
-        });
-        console.log(this.mediaObject);
-      })
+      if(this.remateData != null){
+        let remate_id = respuesta.data.id;
+        let sub_dir_array = [
+          "fotos_toros",
+          "fotos_hembras",
+          "video"
+        ];
+        this.remateServ.browsePath({
+          "path":"remates/remate_"+ remate_id + "/",
+          "sub_dir_array":sub_dir_array
+        }).subscribe((respuesta)=>{
+          let urls = respuesta.data;
+          sub_dir_array.filter((value)=>{
+            this.mediaObject[value] = this.commonServ.processUrls(urls[value]);
+          });
+          console.log(this.mediaObject);
+        })
+      }
     })
   }
 

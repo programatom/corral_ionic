@@ -13,7 +13,7 @@
   <img src="assets/imgs/tira-separadora.png" alt="">
   <br>
 
-  <div class="remate-wrapper">
+  <div class="remate-wrapper" *ngIf="remateData != null">
     <video *ngIf="mediaObject.video.length != 0"[src]="mediaObject.video" width="95%" height="240" controls poster="assets/imgs/portada-video.jpg">
 
     </video>
@@ -76,7 +76,9 @@
 
   </div>
 
-
+  <div class="text-not-found" *ngIf="remateData == null">
+    Aún no tenemos un remate programado!
+  </div>
 
 
 
