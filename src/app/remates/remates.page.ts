@@ -57,6 +57,7 @@ export class RematesPage implements OnInit {
           "path":"remates/remate_"+ remate_id + "/",
           "sub_dir_array":sub_dir_array
         }).subscribe((respuesta)=>{
+          console.log(respuesta)
           let urls = respuesta.data;
           sub_dir_array.filter((value)=>{
             this.mediaObject[value] = this.commonServ.processUrls(urls[value]);
