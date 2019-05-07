@@ -67,7 +67,10 @@
     <app-ficha [nombre]="toro.nombre" [toro]="toro" *ngIf="selectedView == 'ficha'">
     </app-ficha>
     <app-fotos [fotos]="toro.media.imagenes_secundarias" *ngIf="selectedView =='fotos'"></app-fotos>
-
+    <div class="video-container" *ngIf="selectedView == 'videos'">
+      <video *ngIf="toro.media.video.length != 0" [src]="toro.media.video[0]" width="95%" height="240" controls [poster]="toro.media.imagen_principal[0]">
+      </video>
+    </div>
   </div>
 
 </ion-content>

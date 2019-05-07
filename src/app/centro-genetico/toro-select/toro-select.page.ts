@@ -52,7 +52,6 @@ export class ToroSelectPage implements OnInit {
   }
 
   irAToro(toro){
-    console.log(toro)
     this.torosServ.selectedToro = toro;
     this.navCtrl.navigateForward("/toro-data");
   }

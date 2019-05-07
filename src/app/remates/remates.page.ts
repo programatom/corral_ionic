@@ -23,6 +23,7 @@ export class RematesPage implements OnInit {
   mediaObject = new Object () as any;
   slideOpts1;
   slideOpts2;
+  serverCommunication = false;
 
 
   constructor(private remateServ: RemateService,
@@ -58,6 +59,7 @@ export class RematesPage implements OnInit {
           "sub_dir_array":sub_dir_array
         }).subscribe((respuesta)=>{
           console.log(respuesta)
+          this.serverCommunication = true;
           let urls = respuesta.data;
           sub_dir_array.filter((value)=>{
             this.mediaObject[value] = this.commonServ.processUrls(urls[value]);

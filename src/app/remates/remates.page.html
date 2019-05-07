@@ -1,3 +1,6 @@
+
+
+
 <ion-content>
 
   <ion-row class="container-logo-titulo">
@@ -13,9 +16,8 @@
   <img src="assets/imgs/tira-separadora.png" alt="">
   <br>
 
-  <div class="remate-wrapper" *ngIf="remateData != null">
+  <div class="remate-wrapper" *ngIf="remateData != null && serverCommunication">
     <video *ngIf="mediaObject.video.length != 0"[src]="mediaObject.video" width="95%" height="240" controls poster="assets/imgs/portada-video.jpg">
-
     </video>
     <br><br>
     <div class="recuadro-blanco">
@@ -78,6 +80,12 @@
 
   <div class="text-not-found" *ngIf="remateData == null">
     Aún no tenemos un remate programado!
+  </div>
+
+  <div class="text-not-found" *ngIf="serverCommunication == false">
+    <div class="loader">
+
+    </div>
   </div>
 
 
