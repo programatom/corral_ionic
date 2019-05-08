@@ -25,6 +25,11 @@ export class ToroDataPage implements OnInit {
 
   ngOnInit() {
     this.toro = this.torosServ.selectedToro;
+    Object.keys(this.toro).filter((key)=>{
+      if(this.toro[key] == null){
+        this.toro[key] = "";
+      }
+    });
     console.log(this.toro);
     this.switchView("observaciones");
   }
@@ -33,23 +38,38 @@ export class ToroDataPage implements OnInit {
     const dataNeeded = {
       "cotizacion":[
         {
-          "displayName":"Nombre",
-          "variableName":"nombre",
+          "displayName":"Toro",
+          "variableName":"toro",
         },
         {
-          "displayName":"CUIT",
-          "variableName":"cuit",
-        },
-        {
-          "displayName":"DNI",
-          "variableName":"dni",
-        },
-
+          "displayName":"Cantidad",
+          "variableName":"cantidad",
+        }
       ],
       "pedido":[
         {
+          "displayName":"Razón social",
+          "variableName":"razon_social",
+        },
+        {
+          "displayName":"Toro",
+          "variableName":"toro",
+        },
+        {
+          "displayName":"Cantidad",
+          "variableName":"cantidad",
+        },
+        {
           "displayName":"CUIT",
           "variableName":"cuit",
+        },
+        {
+          "displayName":"Mail",
+          "variableName":"email",
+        },
+        {
+          "displayName":"Teléfono",
+          "variableName":"telefono",
         }
       ]
     }

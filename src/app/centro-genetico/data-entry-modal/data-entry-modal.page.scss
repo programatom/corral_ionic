@@ -10,6 +10,21 @@
   display:table;
 }
 
+.content {
+  border-radius: 5vw;
+  border-style: solid;
+  border-width: medium;
+  border-color: transparent !important;
+
+}
+ion-content{
+  border-radius: 5vw;
+  border-style: solid;
+  border-width: medium;
+  border-color: transparent !important;
+
+}
+
 .texto-boton{
   display: table-cell;
   vertical-align: middle;
