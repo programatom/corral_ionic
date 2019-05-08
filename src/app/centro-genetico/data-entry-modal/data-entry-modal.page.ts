@@ -52,7 +52,7 @@ export class DataEntryModalPage implements OnInit {
         if(userDataArray.includes(varName)){
           this.localStorageServ.insertAndInstantiateValue(varName, this.inputObject[varName]);
         }
-        body = body + displayName + ": " + this.inputObject[varName] + "\n"
+        body = body + "<b>" +displayName + "</b>" + ": " + this.inputObject[varName] + "<br>"
       }
     });
     if(errorMsg != ""){

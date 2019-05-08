@@ -12,6 +12,7 @@ export class ToroSelectPage implements OnInit {
 
   toros = [];
   type;
+  serverCommunication = false;
   constructor(private navCtrl: NavController,
               private torosServ: TorosService,
               private commonServ: CommonService) { }
@@ -30,6 +31,7 @@ export class ToroSelectPage implements OnInit {
       "type": type
     }).subscribe((respuesta)=>{
       console.log(respuesta);
+      this.serverCommunication = true;
       this.toros = respuesta.data;
       this.processUrls();
     })

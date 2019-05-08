@@ -6,6 +6,16 @@ ion-content{
   margin-bottom: 4vw;
 }
 
+.splash {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left:auto;
+  margin-right:auto;
+  top:30%;
+
+}
+
 
 .titulo{
   color:var(--ion-color-light);
@@ -40,10 +50,10 @@ ion-content{
   background-color: black;
   position:relative;
   bottom:2vw;
-  border-radius: 15vw 15vw 0 0;
-  border-style: solid;
-  border-width: medium;
-  border-color: transparent !important;
+  border-top-left-radius: 15vw;
+  border-top-right-radius: 15vw;
+  overflow: hidden;
+  //border-radius: 15vw 15vw 0 0;
   margin-left: 20%;
 
 }
